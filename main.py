@@ -4,6 +4,7 @@ import sys
 if __name__ == "__main__":
     try:
         train_pipeline = TrainPipeline()
-        train_pipeline.start_data_ingestion()
+        train_pipeline.run_pipeline()
+        pass
     except Exception as e:
         raise XRayException(e, sys)
