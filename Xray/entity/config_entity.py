@@ -19,9 +19,9 @@ class DataIngestionConfig:
             self.artifact_dir, "data_ingestion", self.s3_data_folder
         )
 
-        self.train_data_path: str = os.path.join(self.data_path, "train")
+        self.train_data_path: str = os.path.join(self.data_path, "val")
 
-        self.test_data_path: str = os.path.join(self.data_path, "test")
+        self.test_data_path: str = os.path.join(self.data_path, "val")
 
 
 

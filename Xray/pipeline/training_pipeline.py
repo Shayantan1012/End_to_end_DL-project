@@ -178,9 +178,3 @@ class TrainPipeline:
             
             
         
-if __name__ == "__main__":
-    try:
-        train_pipeline = TrainPipeline()
-        train_pipeline.start_data_ingestion()
-    except Exception as e:
-        raise XRayException(e, sys)
