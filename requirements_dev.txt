@@ -16,4 +16,6 @@ tox
 black
 flake8
 mypy
+torchsummary
+cv2
 -e .

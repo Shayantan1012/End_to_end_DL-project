@@ -43,6 +43,7 @@ TRAIN_TRANSFORMS_FILE: str = "train_transforms.pkl"
 
 TEST_TRANSFORMS_FILE: str = "test_transforms.pkl"
 
+
 BATCH_SIZE: int = 2
 
 SHUFFLE: bool = False
@@ -70,4 +71,17 @@ BENTOML_SERVICE_NAME: str = "xray_service"
 
 BENTOML_ECR_URI: str = "xray_bento_image"
 
-PREDICTION_LABEL: dict = {"0": CLASS_LABEL_1, 1: CLASS_LABEL_2}
+PREDICTION_LABEL = {
+    0: "CLASS_LABEL_0",
+    1: "CLASS_LABEL_1",
+    2: "CLASS_LABEL_2",
+    3: "CLASS_LABEL_3",
+    4: "CLASS_LABEL_4",
+    5: "CLASS_LABEL_5",
+    6: "CLASS_LABEL_6",
+    7: "CLASS_LABEL_7",
+    8: "CLASS_LABEL_8",
+    9: "CLASS_LABEL_9",
+    10: "CLASS_LABEL_10",
+    11: "CLASS_LABEL_11",
+}
