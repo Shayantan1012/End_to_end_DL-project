@@ -42,7 +42,8 @@ def save_image(uploaded_file):
         
         prediction= F.softmax(output, dim=1)
         
-        prediction = int(torch.max(output.data, 1)[1].numpy())
+        prediction = int(torch.max(output.data, 1)[1].numpy()[0])
+
         
         st.image(image, caption="This is a sample image", use_column_width=True)
         
