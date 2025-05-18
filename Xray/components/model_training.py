@@ -204,17 +204,19 @@ class ModelTrainer:
 
             torch.save(model, self.model_trainer_config.trained_model_path)
 
-            train_transforms_obj = joblib.load(
-                self.data_transformation_artifact.train_transform_file_path
-            )
+            # train_transforms_obj = joblib.load(
+            #     self.data_transformation_artifact.train_transform_file_path
+            # )
 
-            bentoml.pytorch.save_model(
-                name=self.model_trainer_config.trained_bentoml_model_name,
-                model=model,
-                custom_objects={
-                    self.model_trainer_config.train_transforms_key: train_transforms_obj
-                },
-            )
+            # bentoml.pytorch.save_model(
+            #     name=self.model_trainer_config.trained_bentoml_model_name,
+            #     model=model,
+            #     custom_objects={
+            #         self.model_trainer_config.train_transforms_key: train_transforms_obj
+            #     },
+            # )
+
+
 
             model_trainer_artifact: ModelTrainerArtifact = ModelTrainerArtifact(
                 trained_model_path=self.model_trainer_config.trained_model_path

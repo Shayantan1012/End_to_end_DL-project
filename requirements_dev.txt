@@ -17,5 +17,9 @@ black
 flake8
 mypy
 torchsummary
-cv2
+opencv-python
+
+boto3
+mypy-boto3-s3
+streamlit 
 -e .

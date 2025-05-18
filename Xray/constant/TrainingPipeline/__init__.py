@@ -69,19 +69,18 @@ BENTOML_MODEL_NAME: str = "xray_model"
 
 BENTOML_SERVICE_NAME: str = "xray_service"
 
-BENTOML_ECR_URI: str = "xray_bento_image"
+BENTOML_ECR_URI: str = "x_ray_image_repository"
 
-PREDICTION_LABEL = {
-    0: "CLASS_LABEL_0",
-    1: "CLASS_LABEL_1",
-    2: "CLASS_LABEL_2",
-    3: "CLASS_LABEL_3",
-    4: "CLASS_LABEL_4",
-    5: "CLASS_LABEL_5",
-    6: "CLASS_LABEL_6",
-    7: "CLASS_LABEL_7",
-    8: "CLASS_LABEL_8",
-    9: "CLASS_LABEL_9",
-    10: "CLASS_LABEL_10",
-    11: "CLASS_LABEL_11",
-}
+PREDICTION_LABEL = ['Black-grass',
+  'Charlock',
+  'Cleavers',
+  'Common Chickweed',
+  'Common wheat',
+  'Fat Hen',
+  'Loose Silky-bent',
+  'Maize',
+  'Scentless Mayweed',
+  'Shepherds Purse',
+  'Small-flowered Cranesbill',
+  'Sugar beet']
+
