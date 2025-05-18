@@ -19,6 +19,7 @@ from Xray.entity.config_entity import ModelTrainerConfig
 from Xray.exception import XRayException
 from Xray.logger import logging
 from Xray.ml.model.arch import Net
+from Xray.entity.config_entity import ModelTrainerConfig
 
 
 
@@ -203,6 +204,11 @@ class ModelTrainer:
             os.makedirs(self.model_trainer_config.artifact_dir, exist_ok=True)
 
             torch.save(model, self.model_trainer_config.trained_model_path)
+            
+            with open(self.model_trainer_config.trained_model_path, 'rb') as src_file:
+                data = src_file.read()
+            with open("model/model.pt", 'wb') as dest_file:
+                dest_file.write(data)
 
             # train_transforms_obj = joblib.load(
             #     self.data_transformation_artifact.train_transform_file_path

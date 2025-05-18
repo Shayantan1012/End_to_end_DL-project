@@ -26,6 +26,8 @@ class ModelPusher:
         """
         logging.info("Entered initiate_model_pusher method of Modelpusher class")
         try:
+            
+     
             # Uploading the best model to s3 bucket
             self.s3.upload_file(
                 "model/model.pt",

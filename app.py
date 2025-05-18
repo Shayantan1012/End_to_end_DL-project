@@ -6,6 +6,7 @@ from PIL import Image
 from pathlib import Path
 import torch.nn.functional as F
 from Xray.constant.TrainingPipeline import *
+from Xray.entity.artifact_entity import ModelTrainerArtifact
 
 
 # this is for saving images and prediction
@@ -16,8 +17,10 @@ def save_image(uploaded_file):
         with open(save_path, "wb") as f:
             f.write(uploaded_file.read())
         st.success(f"Image saved to {save_path}")
+        
 
-        model = torch.load("model/model.pt", weights_only=False)
+
+        model = torch.load('model/model.pt', weights_only=False)
 
 
         trans = transforms.Compose([
@@ -26,6 +29,7 @@ def save_image(uploaded_file):
             transforms.CenterCrop(224),
             transforms.ToTensor(),
             ])
+        
 
         image = Image.open(Path('images/input.jpeg'))
 

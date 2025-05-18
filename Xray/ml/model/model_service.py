@@ -41,12 +41,9 @@ async def predict(img):
 
     image = PILImage.open(io.BytesIO(im_bytes)).convert("RGB")
 
-    #  image = torch.from_numpy(np.array(my_transforms(image).unsqueeze(0)))
     
     image = my_transforms(image).unsqueeze(0)
 
-
-    # image = image.reshape(1, 3, 224, 224)
 
     batch_ret = await runner.async_run(image)
 
