@@ -175,3 +175,6 @@ cython_debug/
 
 
 /venv
+/artifacts
+/logs
+/model/model.pt
