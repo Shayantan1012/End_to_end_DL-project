@@ -21,7 +21,8 @@ name="Xray",
 version="0.0.1",
 author="Shayantan Biswas",
 author_email="shayantanbiswas137@gmail.com",
-install_requires=get_requirement(r"C:\Users\SHAYANTAN BISWAS\Desktop\DeepLearningProject\requirements_dev.txt"),
+# install_requires=get_requirement(r"C:\Users\SHAYANTAN BISWAS\Desktop\DeepLearningProject\requirements_dev.txt"),
+install_requires=[],
 packages=find_packages(include=["Xray*"])
 )
     

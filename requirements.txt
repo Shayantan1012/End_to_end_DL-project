@@ -3,4 +3,4 @@ tqdm
 pip-chill
 wincertstore
 streamlit 
-# -e .
+-e .
