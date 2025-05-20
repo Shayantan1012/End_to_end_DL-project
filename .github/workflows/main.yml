@@ -87,7 +87,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Pull images
-        run: docker pull ${{ secrets.REGISTRY }}/${{ secrets.IMAGE_NAME }}:main
+        run: docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.IMAGE_NAME }}:main
 
         
       - name: Run Docker Image to serve users
