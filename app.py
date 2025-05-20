@@ -22,7 +22,7 @@ def save_image(uploaded_file):
 
         model = torch.load('model/model.pt', weights_only=False)
 
-# 
+# //////
         trans = transforms.Compose([
             transforms.RandomHorizontalFlip(),
             transforms.Resize(224),
